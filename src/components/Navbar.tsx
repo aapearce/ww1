@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="w-8 h-8 rounded-sm flex items-center justify-center" style={{ backgroundColor: 'var(--accent-gold)' }}>
-              <span className="text-xs font-bold" style={{ color: 'var(--nav-bg)', fontFamily: 'Playfair Display, serif' }}>GW</span>
+              <span className="text-xs font-bold" style={{ color: 'var(--nav-bg)', fontFamily: 'var(--font-playfair), serif' }}>GW</span>
             </div>
             <span className="font-display text-lg font-bold tracking-wide hidden sm:block" style={{ color: 'var(--accent-gold)' }}>
               {tx.siteTitle}
@@ -50,7 +50,7 @@ export default function Navbar() {
                 style={{
                   backgroundColor: ageGroup === '8-13' ? 'var(--accent-gold)' : 'transparent',
                   color: ageGroup === '8-13' ? 'var(--nav-bg)' : 'var(--nav-muted)',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'var(--font-inter), sans-serif',
                 }}
               >
                 8–13
@@ -61,7 +61,7 @@ export default function Navbar() {
                 style={{
                   backgroundColor: ageGroup === '13-18' ? 'var(--accent-gold)' : 'transparent',
                   color: ageGroup === '13-18' ? 'var(--nav-bg)' : 'var(--nav-muted)',
-                  fontFamily: 'Inter, sans-serif',
+                  fontFamily: 'var(--font-inter), sans-serif',
                 }}
               >
                 13–18
@@ -90,7 +90,7 @@ export default function Navbar() {
                       style={{
                         backgroundColor: language === lang.code ? 'var(--accent-gold-light)' : 'transparent',
                         color: language === lang.code ? 'var(--accent-gold)' : 'var(--text-secondary)',
-                        fontFamily: 'Inter, sans-serif',
+                        fontFamily: 'var(--font-inter), sans-serif',
                       }}
                     >
                       <span>{lang.flag}</span>
@@ -148,7 +148,7 @@ export default function Navbar() {
 function NavLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
     <Link href={href} className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:opacity-80"
-      style={{ color: 'var(--nav-muted)', fontFamily: 'Inter, sans-serif', letterSpacing: '0.06em' }}>
+      style={{ color: 'var(--nav-muted)', fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '0.06em' }}>
       {icon}
       <span className="uppercase text-xs tracking-widest">{label}</span>
     </Link>
@@ -158,7 +158,7 @@ function NavLink({ href, icon, label }: { href: string; icon: React.ReactNode; l
 function MobileNavLink({ href, icon, label, onClick }: { href: string; icon: React.ReactNode; label: string; onClick: () => void }) {
   return (
     <Link href={href} onClick={onClick} className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all hover:opacity-80"
-      style={{ color: 'var(--nav-text)', fontFamily: 'Inter, sans-serif' }}>
+      style={{ color: 'var(--nav-text)', fontFamily: 'var(--font-inter), sans-serif' }}>
       {icon}
       <span>{label}</span>
     </Link>

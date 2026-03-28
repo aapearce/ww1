@@ -94,7 +94,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-8">
               <div className="h-px w-12" style={{ backgroundColor: 'var(--accent-gold)' }} />
-              <span className="text-xs font-semibold tracking-[0.3em] uppercase" style={{ color: 'var(--accent-gold)', fontFamily: 'Inter, sans-serif' }}>
+              <span className="text-xs font-semibold tracking-[0.3em] uppercase" style={{ color: 'var(--accent-gold)', fontFamily: 'var(--font-inter), sans-serif' }}>
                 {tx.tagline}
               </span>
             </div>
@@ -103,19 +103,19 @@ export default function HomePage() {
                 <span key={i}>{line}{i === 0 && <br />}</span>
               ))}
             </h1>
-            <p className="text-lg sm:text-xl leading-relaxed mb-10 max-w-xl" style={{ color: 'var(--nav-muted)', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
+            <p className="text-lg sm:text-xl leading-relaxed mb-10 max-w-xl" style={{ color: 'var(--nav-muted)', fontFamily: 'var(--font-inter), sans-serif', fontWeight: 300 }}>
               {tx.heroSubtitle}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/learn"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
-                style={{ backgroundColor: 'var(--accent-gold)', color: '#1c1409', fontFamily: 'Inter, sans-serif' }}>
+                style={{ backgroundColor: 'var(--accent-gold)', color: '#1c1409', fontFamily: 'var(--font-inter), sans-serif' }}>
                 {tx.startLearning}
                 <ArrowRight size={16} />
               </Link>
               <Link href="/map"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all border hover:opacity-80"
-                style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#f4e8c4', fontFamily: 'Inter, sans-serif' }}>
+                style={{ borderColor: 'rgba(201,168,76,0.4)', color: '#f4e8c4', fontFamily: 'var(--font-inter), sans-serif' }}>
                 {tx.exploreMap}
                 <Map size={16} />
               </Link>
@@ -132,7 +132,7 @@ export default function HomePage() {
             ].map(stat => (
               <div key={stat.label} className="px-6 py-5" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}>
                 <div className="font-display text-2xl sm:text-3xl font-bold" style={{ color: 'var(--accent-gold)' }}>{stat.value}</div>
-                <div className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'var(--nav-muted)', fontFamily: 'Inter, sans-serif' }}>{stat.label}</div>
+                <div className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'var(--nav-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -152,7 +152,7 @@ export default function HomePage() {
                 style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)' }}
               >
                 <div className="absolute top-5 right-5">
-                  <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ backgroundColor: 'var(--accent-gold-light)', color: 'var(--accent-gold)', fontFamily: 'Inter, sans-serif' }}>
+                  <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ backgroundColor: 'var(--accent-gold-light)', color: 'var(--accent-gold)', fontFamily: 'var(--font-inter), sans-serif' }}>
                     {mode.tag}
                   </span>
                 </div>
@@ -163,10 +163,10 @@ export default function HomePage() {
                 <h2 className="font-display text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
                   {tx[mode.titleKey as keyof typeof tx]}
                 </h2>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>
                   {tx[mode.descKey as keyof typeof tx]}
                 </p>
-                <div className="flex items-center gap-1 text-sm font-medium" style={{ color: mode.accent, fontFamily: 'Inter, sans-serif' }}>
+                <div className="flex items-center gap-1 text-sm font-medium" style={{ color: mode.accent, fontFamily: 'var(--font-inter), sans-serif' }}>
                   {tx[mode.ctaKey as keyof typeof tx]}
                   <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
                 </div>
@@ -196,8 +196,8 @@ export default function HomePage() {
                   <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                     <span className="font-display text-xl font-bold w-16 shrink-0" style={{ color: 'var(--accent-gold)' }}>{item.year}</span>
                     <div>
-                      <span className="text-xs uppercase tracking-wider mr-2" style={{ color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>{item.month}</span>
-                      <span className="text-sm" style={{ color: 'var(--text-secondary)', fontFamily: 'Inter, sans-serif' }}>{item.event}</span>
+                      <span className="text-xs uppercase tracking-wider mr-2" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>{item.month}</span>
+                      <span className="text-sm" style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-inter), sans-serif' }}>{item.event}</span>
                     </div>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function HomePage() {
             <h2 className="font-display text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>{tx.featuredStories}</h2>
           </div>
           <Link href="/learn" className="text-sm font-medium flex items-center gap-1 hover:opacity-70 transition-opacity"
-            style={{ color: 'var(--accent-gold)', fontFamily: 'Inter, sans-serif' }}>
+            style={{ color: 'var(--accent-gold)', fontFamily: 'var(--font-inter), sans-serif' }}>
             View all <ChevronRight size={14} />
           </Link>
         </div>
@@ -232,15 +232,15 @@ export default function HomePage() {
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-3xl">{story.emoji}</span>
-                  <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>{story.date}</span>
+                  <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>{story.date}</span>
                 </div>
                 <h3 className="font-display text-lg font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
                   {tx[story.titleKey as keyof typeof tx]}
                 </h3>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>
                   {tx[story.descKey as keyof typeof tx]}
                 </p>
-                <span className="text-xs font-semibold flex items-center gap-1" style={{ color: story.color, fontFamily: 'Inter, sans-serif' }}>
+                <span className="text-xs font-semibold flex items-center gap-1" style={{ color: story.color, fontFamily: 'var(--font-inter), sans-serif' }}>
                   {tx.readMore}
                 </span>
               </div>
@@ -254,11 +254,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-sm flex items-center justify-center" style={{ backgroundColor: 'var(--accent-gold)' }}>
-              <span className="text-xs font-bold" style={{ color: '#1c1409', fontFamily: 'Playfair Display, serif' }}>GW</span>
+              <span className="text-xs font-bold" style={{ color: '#1c1409', fontFamily: 'var(--font-playfair), serif' }}>GW</span>
             </div>
             <span className="font-display text-sm font-bold" style={{ color: 'var(--text-secondary)' }}>{tx.siteTitle}</span>
           </div>
-          <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'Inter, sans-serif' }}>{tx.footerRights}</p>
+          <p className="text-xs" style={{ color: 'var(--text-muted)', fontFamily: 'var(--font-inter), sans-serif' }}>{tx.footerRights}</p>
         </div>
       </footer>
 
